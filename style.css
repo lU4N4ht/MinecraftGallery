@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul, ol, li{
+    list-style: none;
+}
+body{
+    background-color: rgb(177, 206, 130);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    padding-left: 96px;
+    padding-right: 96px;
+    font-family: 'Dosis', sans-serif;
+}
+.titulo2{
+    color: seagreen;
+}
+header{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    
+}
+.galeria{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 12px;
+    grid-template-areas: 
+    "f1 f1 f1 f1 f1 f2 f2 f2 f3 f3 f3"
+    "f1 f1 f1 f1 f1 f4 f4 f4 f5 f5 f5" 
+    "f6 f6 f6 f7 f7 f7 f8 f8 f8 f8 f8";
+}
+.foto{
+    background-color: lightgreen;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.foto:nth-child(1){
+    grid-area: f1;
+    background-image: url(./img/dc4fb9fa1577819e894d9b70934a0f7b.jpg);
+}
+.foto:nth-child(2){
+    grid-area: f2;
+    background-image: url(./img/336790901e6d62dca4a128c317459d8d.jpg);
+}
+.foto:nth-child(3){
+    grid-area: f3;
+    background-image: url(./img/9d2676b424450caba3b3ace26033348f.jpg);
+}
+.foto:nth-child(4){
+    grid-area: f4;
+    background-image: url(./img/7543dd2513a72478db4138b938ab46a5.jpg);
+}
+.foto:nth-child(5){
+    grid-area: f5;
+    background-image: url(./img/ca8245265afc93ed07d4aacdeb5f3c5c.jpg);
+}
+.foto:nth-child(6){
+    grid-area: f6;
+    background-image: url(./img/MINECRAFT4.jpg);
+}
+.foto:nth-child(7){
+    grid-area: f7;
+    background-image: url(./img/425a3ecb2ddb78730ba9b597334c99c1.jpg);
+}
+.foto:nth-child(8){
+    grid-area: f8;
+    background-image: url(./img/2ed9e71a00f276aee1b7020dd36eb8b2.jpg);
+}
+.foto__info{
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.582);
+    color: silver;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: .3s;
+    text-align: center;
+    padding-top: 20px;
+}
+.foto:hover > .foto__info{
+    transform: translateY(0%);
+}
+@media (max-width:768px){
+    body {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .galeria{
+        display: flex;
+        flex-direction: column;
+    }
+    .foto{
+        width: 100%;
+        height: 33vh;
+    }
+    .button{
+        width: 100%;
+        height: 33vh;
+    }
+}
+.button{
+    display: flex;
+    color: seashell;
+    background-color: seagreen;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    width: 9vw;
+    height: 3vw;
+    margin-top: 1vw;
+    text-align: center;
+    transform: translate(450%);
+}
